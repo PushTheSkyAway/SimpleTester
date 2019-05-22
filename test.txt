@@ -1,0 +1,78 @@
+
+1.Generator liniowy mieszany to: 
+- generator, w ktorym wyraz wolny \"f\" jest niezerowy 
+- generator po czesci liniowy a po czesci nieliniowy 
+- zaden z wymienionych 
+- generator, w ktorym wyraz wolny \"f\" jest zerowy
+<q>
+2.Metoda odwracania dystrybuanty 
+- przekształca liczby generowane w sposób rómierny z przedziału (0,1) wykorzystujac funkcje odwrotna do dystrybuanty F(x) rozkladu docelowego f(x) 
+- jest metoda wykorzystywana wylacznie w przypadku zmiennych losowych o rozkladzie dyskretnym 
+- jest metoda wykorzystywana wylacznie w przypadku zmiennych losowych o rozkladzie ciaglym 
+- nie zawsze moze byc zastosowana z uwagi na brak dystrybuant niektorych rozkladow 
+<q>
+3.Metoda eliminacji 
+- jest wolniejsza od metody odwracania dystrybuanty 
+- jest stosowana wylacznie do generowania liczb o rozkldzie rownomiernym 
+- wymaga identycznej liczby iteracji co metoda odwracania dystrybuanty 
+- jest szybsza od metody odwracania dystrybuanty
+<q>
+4.Generator liniowy 
+- wyznacza kolejne liczby poprzez operacje kombinacji liniowej na wartosciach liczb uprzednio wygenerowanych 
+- zawsze generuje liczby w pelni losowo 
+- wyznacza kolejna liczbe o indeksie \"k\" w wyniku operacji kombinacji liniowej na wartosiach wyrazow o indeksach wiekszych (mniejszych)????
+- wykorzystuje operacje dzielenia calowitego ( /M) w celu ograniczenia generowanych liczb do zakresu (a,b)
+<q>
+5.Sposob rekurencyjny generowanych kolejnych elementow i?u (w zalesoci od wartosci poprzednich) 
+- utrudnia r??leg? generowanie podci???arto?i 
+- w???ymienionej odpowiedzi nie ma odpowiedzi prawdziwej 
+- ( ... ) 
+- jest bez znaczenia w przypadku r??leg?go generowania podci???arto?i
+<q>
+6.Generator liniowy multiplikatywny to: 
+- generator, w kt?? wyraz wolny \"f\" jest zerowy 
+- generator postaci X_n = X_1 * X_2 * Š* X_(N-1) 
+- generator, w kt?? wyraz wolny \?\?jest niezerowy 
+- ?den z wymienionych
+<q>
+7.W przypadku generatora liniowego, w??iwo?i ci?u liczb pseudolosowych s?lepsze w przypadku: 
+- zastosowania w operacji dzielenia modulo M, gdzie M jest liczb?pierwsz?
+- wszystkie odpowiedzi s?fa?zywe 
+- zastosowania wy?cznie parzystych wsp??ynnik??_i kombinacji liniowej 
+- zastosowania w operacji dzielenia modulo M, gdzie M jest liczb?parzyst?
+<q>
+8. Wad?generatora liniowego jest 
+- generowanie punkt??ale?cych jedynie do pewnych podzbior??rzestrzeni 
+- ?dna z wymienionych 
+- niemo?o? generowania liczb dodatnich 
+- du? okres
+<q>
+9.Warto?i kolejnych liczb wygenerowanych za pomoc?generatora liniowego zale? od 
+- wszystkie odpowiedzi s?prawdziwe 
+- wyrazu wolnego \"f\" 
+- warto?i pocz?kowych liczb 
+- wsp??ynnik??_i element??ombinacji liniowej
+<q>
+10.Generatory liczb losowych o rozk?dzie dowolnym 
+- uzyskuje si?a bazie warto?i zwr??ych przez generator r??mierny 
+- uzyskuje si?y?cznie w wyniku zastosowania generator??ieliniowych 
+- wyst?j?jedynie dla zmiennych losowych o rozk?dzie dyskretnym 
+- wyst?j?jedynie dla zmiennych losowych o rozk?dzie ci??m
+<q>
+11.Generator nieliniowy 
+- dwie z wymienionych odpowiedzi s?prawdziwe 
+- jest w stanie osi?ad punkty nale?ce nie tylko do pewnych podzbior??rzestrzeni 
+- wszystkie odpowiedzi s?fa?zywe 
+- wykorzystuje odwrotno? warto?i element??przednio wyznaczonych
+<q>
+12.Metoda eliminacji 
+- jest metod?generowania liczb o rozk?dzie dowolnym, kt??wykorzystuje wprost poj?e funkcji prawdopodobieostwa f(x) zmiennej losowej X 
+- wszystkie odpowiedzi s?fa?zywe 
+- jest metod?generowania liczb o rozk?dzie dowolnym, kt??wykorzystuje wprost poj?e dystrybuanty F(x) rozk?du zmiennej losowej X 
+- jest metod?opart?wy?cznie o przekszta?enia nieliniowe
+<q>
+13.Okres aperiodyczno?i generatora 
+- jest okre?ony poprzez d?go? generowanego podci?u liczb o nie powtarzaj?ych si?ekwencjach warto?i 
+- powinien byd mo?iwie najmniejszy 
+- ?dna z odpowiedzi nie jest poprawna 
+- wyst?je wy?cznie w przypadku generator??aturalnych (ruletka, kostka), a w przypadku generator??iczb pseudolosowych jest zawsze r?? 0
