@@ -7,6 +7,8 @@ use std::io::prelude::*;
 struct ConfigData {
     questions_filename: String,
     welcome_msg: String,
+    correct: String,
+    wrong: String,
 }
 
 fn read_config(config_file_content: String) -> ConfigData {
@@ -14,6 +16,8 @@ fn read_config(config_file_content: String) -> ConfigData {
     let mut cfg = ConfigData {
         questions_filename: String::new(),
         welcome_msg: String::new(),
+        correct: String::new(),
+        wrong: String::new(),
     };
 
     // splitting config file to lines
@@ -30,6 +34,12 @@ fn read_config(config_file_content: String) -> ConfigData {
             "welcome_msg" => {
                 cfg.welcome_msg = param[1].to_string();
             }
+            "correct_answer" => {
+                cfg.correct = param[1].to_string();
+            }
+            "wrong_answer" => {
+                cfg.wrong = param[1].to_string();
+            }
             _ => {
                 println!("Unknown parameter in the config file!");
             }
@@ -40,7 +50,7 @@ fn read_config(config_file_content: String) -> ConfigData {
 }
 
 fn main() {
-    const VER: &str = "STE v0.1.1";
+    const VER: &str = "STE v0.1.1a";
 
     let mut config = File::open("config").expect("Can't find a config file!");
 
@@ -114,9 +124,9 @@ fn main() {
         }
 
         if used_indices[answer_idx - 1] == 2 {
-            println!("Good answer!\n");
+            println!("{}\n", configuration.correct);
         } else {
-            println!("Wrong answer!\n");
+            println!("{}\n", configuration.wrong);
         }
     }
 }
