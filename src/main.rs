@@ -1,53 +1,11 @@
+extern crate rand;
+
 use rand::Rng;
 use std::fs::File;
 use std::io;
 use std::io::prelude::*;
 
-#[derive(Debug)]
-struct ConfigData {
-    questions_filename: String,
-    welcome_msg: String,
-    correct: String,
-    wrong: String,
-}
-
-fn read_config(config_file_content: String) -> ConfigData {
-    // creating new ConfigData
-    let mut cfg = ConfigData {
-        questions_filename: String::new(),
-        welcome_msg: String::new(),
-        correct: String::new(),
-        wrong: String::new(),
-    };
-
-    // splitting config file to lines
-    let lines: Vec<&str> = config_file_content.lines().collect();
-
-    // parsing every line
-    for line in &lines {
-        let param: Vec<&str> = line.split("::").collect();
-
-        match param[0] {
-            "questions_file" => {
-                cfg.questions_filename = param[1].to_string();
-            }
-            "welcome_msg" => {
-                cfg.welcome_msg = param[1].to_string();
-            }
-            "correct_answer" => {
-                cfg.correct = param[1].to_string();
-            }
-            "wrong_answer" => {
-                cfg.wrong = param[1].to_string();
-            }
-            _ => {
-                println!("Unknown parameter in the config file!");
-            }
-        }
-    }
-
-    cfg
-}
+pub mod lib_config;
 
 fn main() {
     const VER: &str = "STE v0.1.1a";
@@ -60,7 +18,7 @@ fn main() {
         .read_to_string(&mut config_content)
         .expect("Can't read the config file.");
 
-    let configuration = read_config(config_content);
+    let configuration = lib_config::read_config(config_content);
 
     let mut test_file = File::open(configuration.questions_filename)
         .expect("Can't open the test file. Check config file and/or your test file.");
